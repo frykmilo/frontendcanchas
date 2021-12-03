@@ -10,7 +10,8 @@ import { DashboardComponent } from './private/dashboard/dashboard.component';
 import { OthersComponent } from './private/others/others.component';
 import { RegistroSeComponent } from './public/registro-se/registro-se.component';
 import { PublicLayoutComponent } from './public/layout/public-layout/public-layout.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,10 @@ import { PublicLayoutComponent } from './public/layout/public-layout/public-layo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

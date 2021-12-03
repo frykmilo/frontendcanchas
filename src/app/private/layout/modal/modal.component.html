@@ -16,13 +16,13 @@
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">      
       <!--Content-->
       <div class="modal-body p-5 pt-0" >
-        <form class="cajita2">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"  class="cajita2">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="usuario">
+                <input type="text" formControlName="user" class="form-control rounded-4" id="floatingInput" placeholder="usuario">
                 <label for="floatingInput">Usuario</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-4" id="floatingPassword" placeholder="contraseña">
+                <input type="password" formControlName="pass" class="form-control rounded-4" id="floatingPassword" placeholder="contraseña">
                 <label for="floatingPassword">Contraseña</label>
             </div>
             

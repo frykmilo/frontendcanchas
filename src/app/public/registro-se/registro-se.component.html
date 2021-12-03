@@ -9,25 +9,25 @@
             </div>
 
             <div class="modal-body p-5 pt-0">
-                <form class="">
+                <form [formGroup]="ReservaForm" (ngSubmit)="onSubmit()" class="" notvalidate>
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="Nombre y apellido">
+                        <input type="text" formControlName="nombre" name="nombre" class="form-control rounded-4" id="floatingInput" placeholder="Nombre y apellido">
                         <label for="floatingInput">Nombre</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control rounded-4" id="floatingPassword" placeholder="correo electronico">
+                        <input type="email" formControlName="email" name="email" class="form-control rounded-4" id="floatingPassword" placeholder="correo electronico">
                         <label for="floatingPassword">e-mail</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input input type="tel" name="telefono" class="form-control rounded-4" id="floatingPassword" placeholder="Celularnum">
+                        <input input type="tel" formControlName="celular" name="celular" class="form-control rounded-4" id="floatingPassword" placeholder="Celularnum">
                         <label for="floatingPassword">Celular</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="date" class="form-control rounded-4" id="floatingInput" placeholder="fecha separacion">
+                        <input type="date" formControlName="fechaReserva" name="fechaReserva" class="form-control rounded-4" id="floatingInput" placeholder="fecha separacion">
                         <label for="floatingInput">Fecha de sep</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="time" class="form-control rounded-4" id="floatingInput" placeholder="Hora separacion">
+                        <input type="time" formControlName="horaReserva" name="horaReserva" class="form-control rounded-4" id="floatingInput" placeholder="Hora separacion">
                         <label for="floatingInput">Hora de sep</label>
                     </div>                             
                     
