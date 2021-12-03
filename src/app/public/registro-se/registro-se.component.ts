@@ -36,7 +36,7 @@ export class RegistroSeComponent implements OnInit {
     const body = {
       ...formData
     };
-
+    //to do reemplazar url por url desplegada// 
     this.http.post<any>("http://localhost:3000/reserva/create", body)
       .subscribe((data) => {
         //por hacer acciones formulario// 
